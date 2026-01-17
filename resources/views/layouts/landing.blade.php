@@ -293,12 +293,12 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.5);
         }
-
         /* Header Scroll Effect - Dark Theme */
         .header-scrolled {
             background: #171717;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
+
 
         /* Green Glow Effect */
         .glow-green {
@@ -329,10 +329,10 @@
 
                 <!-- Nav Links -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#layanan" class="nav-link text-white/90 hover:text-white transition-colors font-semibold">Layanan</a>
-                    <a href="#fitur" class="nav-link text-white/90 hover:text-white transition-colors font-semibold">Fitur</a>
-                    <a href="#cara-kerja" class="nav-link text-white/90 hover:text-white transition-colors font-semibold">Cara Kerja</a>
-                    <a href="#harga" class="nav-link text-white/90 hover:text-white transition-colors font-semibold">Harga</a>
+                    <a href="#layanan" class="nav-link text-white hover:text-primary-400 transition-colors font-semibold">Layanan</a>
+                    <a href="#fitur" class="nav-link text-white hover:text-primary-400 transition-colors font-semibold">Fitur</a>
+                    <a href="#cara-kerja" class="nav-link text-white hover:text-primary-400 transition-colors font-semibold">Cara Kerja</a>
+                    <a href="#harga" class="nav-link text-white hover:text-primary-400 transition-colors font-semibold">Harga</a>
                 </div>
 
                 <!-- CTA Buttons -->
@@ -464,30 +464,19 @@
 
         // Header Scroll Effect
         const header = document.getElementById('header');
-        const logoText = document.getElementById('logo-text');
-        const logoIcon = document.querySelector('header a div');
         const navLinks = document.querySelectorAll('.nav-link');
-        const loginBtn = document.getElementById('login-btn');
-        const registerBtn = document.getElementById('register-btn');
-        const menuIcon = document.getElementById('menu-icon');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+        function updateHeader() {
+            if (window.scrollY > 20) {
                 header.classList.add('header-scrolled');
-                // Keep nav links white on dark header
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white/90');
-                    link.classList.add('text-white');
-                });
             } else {
                 header.classList.remove('header-scrolled');
-                // Transparent header on hero
-                navLinks.forEach(link => {
-                    link.classList.add('text-white/90');
-                    link.classList.remove('text-white');
-                });
             }
-        });
+        }
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader(); // Initial check
+
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');

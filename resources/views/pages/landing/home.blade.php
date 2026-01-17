@@ -3,60 +3,51 @@
 @section('title', 'Platform UMKM - Digitalisasi Bisnis Anda')
 
 @section('content')
-    <!-- Hero Section - Bold & Playful -->
-    <section class="relative min-h-screen bg-primary-500 overflow-hidden">
-        <!-- Pattern Background -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
-            <div class="absolute top-40 right-20 w-24 h-24 border-4 border-white rounded-full"></div>
-            <div class="absolute bottom-32 left-1/4 w-16 h-16 border-4 border-white rounded-full"></div>
-            <div class="absolute bottom-20 right-1/3 w-20 h-20 bg-white rounded-full"></div>
+    <!-- Hero Section - Background Image & Centered -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80" alt="Background UMKM" class="w-full h-full object-cover">
+            <!-- Overlay Gelap & Blur -->
+            <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+            <!-- Gradient Overlay from Bottom for Blend -->
+            <div class="absolute bottom-0 left-0 right-0 h-64 bg-linear-gradient-to-t from-black/80 to-transparent"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-                <!-- Left Content -->
-                <div class="text-white">
-                    <p class="text-lg md:text-xl font-medium mb-4 opacity-90">
-                        Solusi digital untuk UMKM Indonesia
-                    </p>
+        <!-- Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl md:text-2xl font-medium mb-6 text-primary-200 animate-fade-in-up">
+                Solusi digital untuk UMKM Indonesia
+            </p>
 
-                    <h1 class="text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-6">
-                        UMKM
-                    </h1>
+            <h1 class="text-6xl md:text-7xl lg:text-9xl font-black leading-none mb-8 text-white tracking-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
+                Digitalisasi<br><span class="text-primary-400">UMKM</span>
+            </h1>
 
-                    <p class="text-lg md:text-xl opacity-90 mb-8 max-w-md">
-                        Platform yang bikin jualan jadi gampang. Kelola toko, terima order, dan kembangkan bisnis—semua di satu tempat.
-                    </p>
+            <p class="text-xl md:text-2xl text-neutral-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow animate-fade-in-up" style="animation-delay: 0.2s;">
+                Platform yang bikin jualan jadi gampang. Kelola toko, terima order, dan kembangkan bisnis—semua di satu tempat.
+            </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="{{ route('register') ?? '#' }}"
-                            class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-600 font-bold rounded-full hover:bg-neutral-100 transition-all shadow-lg">
-                            <span>Mulai Gratis</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#layanan" class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-bold rounded-full hover:bg-primary-700 transition-all border-2 border-white/30">
-                            <span>Lihat Layanan</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Content - Lottie Animation (Overflow allowed) -->
-                <div class="relative hidden lg:flex items-center justify-center min-h-[500px] ml-180 mb-25" style="overflow: visible;">
-                    <!-- Lottie Player - Large and slow with bounce mode -->
-                    <lottie-player src="{{ asset('store.json') }}" background="transparent" speed="0.7" mode="bounce" style="width: 1200px; height: 1200px; position: absolute; right: -200px;" loop
-                        autoplay>
-                    </lottie-player>
-                </div>
+            <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+                <a href="{{ route('register') ?? '#' }}"
+                    class="inline-flex items-center gap-2 px-10 py-5 bg-primary-500 text-white font-bold text-lg rounded-full hover:bg-primary-600 transition-all shadow-[0_0_30px_rgba(0,170,19,0.5)] hover:scale-105">
+                    <span>Mulai Gratis</span>
+                    <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                </a>
+                <a href="#layanan"
+                    class="inline-flex items-center gap-2 px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold text-lg rounded-full hover:bg-white/20 transition-all border-2 border-white/50 hover:scale-105">
+                    <span>Lihat Layanan</span>
+                </a>
             </div>
         </div>
 
         <!-- Wave Bottom -->
-        <div class="absolute -bottom-1 left-0 right-0 z-10">
+        <div class="absolute -bottom-1 left-0 right-0 z-20">
             <svg class="w-full h-auto block align-middle" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
             </svg>
-        </div>
         </div>
     </section>
 
