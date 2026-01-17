@@ -1,8 +1,137 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* ===================================
+       FONT FAMILY
+       =================================== */
+    --font-sans:
+        "Urbanist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+
+    /* ===================================
+       PRIMARY COLORS (Vibrant Green - Gojek Style)
+       Fresh, energetic, modern
+       =================================== */
+    --color-primary-50: #e8fef1;
+    --color-primary-100: #c6fcd9;
+    --color-primary-200: #8ef9b3;
+    --color-primary-300: #4aed85;
+    --color-primary-400: #1fd860;
+    --color-primary-500: #00aa13;
+    --color-primary-600: #008c10;
+    --color-primary-700: #006d0d;
+    --color-primary-800: #00560a;
+    --color-primary-900: #004508;
+    --color-primary-950: #002a05;
+
+    /* ===================================
+       SECONDARY COLORS (Teal)
+       Complementary accent color
+       =================================== */
+    --color-secondary-50: #f0fdfa;
+    --color-secondary-100: #ccfbf1;
+    --color-secondary-200: #99f6e4;
+    --color-secondary-300: #5eead4;
+    --color-secondary-400: #2dd4bf;
+    --color-secondary-500: #14b8a6;
+    --color-secondary-600: #0d9488;
+    --color-secondary-700: #0f766e;
+    --color-secondary-800: #115e59;
+    --color-secondary-900: #134e4a;
+    --color-secondary-950: #042f2e;
+
+    /* ===================================
+       ACCENT COLORS (Lime)
+       Vibrant highlights and CTAs
+       =================================== */
+    --color-accent-50: #f7fee7;
+    --color-accent-100: #ecfccb;
+    --color-accent-200: #d9f99d;
+    --color-accent-300: #bef264;
+    --color-accent-400: #a3e635;
+    --color-accent-500: #84cc16;
+    --color-accent-600: #65a30d;
+    --color-accent-700: #4d7c0f;
+    --color-accent-800: #3f6212;
+    --color-accent-900: #365314;
+    --color-accent-950: #1a2e05;
+
+    /* ===================================
+       NEUTRAL COLORS (Slate Gray)
+       UI backgrounds, text, borders
+       =================================== */
+    --color-neutral-50: #f8fafc;
+    --color-neutral-100: #f1f5f9;
+    --color-neutral-200: #e2e8f0;
+    --color-neutral-300: #cbd5e1;
+    --color-neutral-400: #94a3b8;
+    --color-neutral-500: #64748b;
+    --color-neutral-600: #475569;
+    --color-neutral-700: #334155;
+    --color-neutral-800: #1e293b;
+    --color-neutral-900: #0f172a;
+    --color-neutral-950: #020617;
+
+    /* ===================================
+       SEMANTIC COLORS
+       Success, Warning, Error, Info
+       =================================== */
+    --color-success-50: #f0fdf4;
+    --color-success-100: #dcfce7;
+    --color-success-500: #22c55e;
+    --color-success-600: #16a34a;
+    --color-success-700: #15803d;
+
+    --color-warning-50: #fffbeb;
+    --color-warning-100: #fef3c7;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-700: #b45309;
+
+    --color-error-50: #fef2f2;
+    --color-error-100: #fee2e2;
+    --color-error-500: #ef4444;
+    --color-error-600: #dc2626;
+    --color-error-700: #b91c1c;
+
+    --color-info-50: #eff6ff;
+    --color-info-100: #dbeafe;
+    --color-info-500: #3b82f6;
+    --color-info-600: #2563eb;
+    --color-info-700: #1d4ed8;
+
+    /* ===================================
+       SURFACE COLORS (Light Mode)
+       Backgrounds and cards
+       =================================== */
+    --color-surface-50: #ffffff;
+    --color-surface-100: #f8fafc;
+    --color-surface-200: #f1f5f9;
+    --color-surface-300: #e2e8f0;
+
+    /* ===================================
+       SPACING (Extended)
+       =================================== */
+    --spacing-18: 4.5rem;
+    --spacing-22: 5.5rem;
+    --spacing-30: 7.5rem;
+
+    /* ===================================
+       BORDER RADIUS
+       =================================== */
+    --radius-4xl: 2rem;
+    --radius-5xl: 2.5rem;
+
+    /* ===================================
+       BOX SHADOW
+       =================================== */
+    --shadow-soft:
+        0 2px 15px -3px rgba(0, 0, 0, 0.07),
+        0 10px 20px -2px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 40px -10px rgba(0, 170, 19, 0.3);
+    --shadow-glow-lg: 0 0 60px -15px rgba(0, 170, 19, 0.4);
 }
