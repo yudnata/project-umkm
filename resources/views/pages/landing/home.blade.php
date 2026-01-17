@@ -15,10 +15,7 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl md:text-2xl font-medium mb-6 text-primary-200 animate-fade-in-up">
-                Solusi digital untuk UMKM Indonesia
-            </p>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
 
             <h1 class="text-6xl md:text-7xl lg:text-9xl font-black leading-none mb-8 text-white tracking-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
                 Digitalisasi<br><span class="text-primary-400">UMKM</span>
