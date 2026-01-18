@@ -10,6 +10,7 @@
             <span class="text-neutral-900 font-medium">Store Profile</span>
         </nav>
 
+
         <div class="mb-8">
             <h1 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4 tracking-tight">UMKM Name Cleaning Service</h1>
             <div class="flex items-center gap-2 text-neutral-500">
@@ -19,27 +20,32 @@
                 <span class="text-primary-600 font-medium bg-primary-50 px-3 py-1 rounded-full text-xs">Verified Partner</span>
             </div>
         </div>
-
+        <div class="mt-8 text-md mb-10">
+            <p class="text-neutral-600">
+                UMKM Name Cleaning Service adalah penyedia jasa kebersihan profesional yang berfokus pada kualitas dan kepuasan pelanggan. Kami menggunakan peralatan modern dan bahan pembersih ramah
+                lingkungan.
+            </p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-[500px] mb-8 rounded-3xl overflow-hidden">
             <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581578731117-104f2a863a30?w=800&q=80" alt="Cleaning Service Main"
+                <img src="https://images.pexels.com/photos/10557898/pexels-photo-10557898.jpeg" alt="Cleaning Service Main"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500"></div>
             </div>
             <div class="relative group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1527515637-62da7a0a1329?w=400&q=80" alt="Cleaning Detail 1"
+                <img src="https://images.pexels.com/photos/4239074/pexels-photo-4239074.jpeg" alt="Cleaning Detail 1"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             </div>
             <div class="relative group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?w=400&q=80" alt="Cleaning Detail 2"
+                <img src="https://images.pexels.com/photos/4098579/pexels-photo-4098579.jpeg" alt="Cleaning Detail 2"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             </div>
             <div class="relative group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400&q=80" alt="Cleaning Detail 3"
+                <img src="https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg" alt="Cleaning Detail 3"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             </div>
             <div class="relative group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?w=400&q=80" alt="Cleaning Detail 4"
+                <img src="https://images.pexels.com/photos/4099260/pexels-photo-4099260.jpeg" alt="Cleaning Detail 4"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 <button class="absolute inset-0 bg-black/50 text-white font-bold text-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Lihat Semua Foto
@@ -47,7 +53,7 @@
             </div>
         </div>
 
-        <div class="bg-white border border-neutral-100 rounded-2xl p-6 shadow-soft flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in-up">
+        <div class="bg-white border border-neutral-100 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in-up">
             <div class="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-600">
@@ -76,20 +82,14 @@
                     <i data-lucide="phone" class="w-4 h-4"></i>
                     <span>Hubungi Kami</span>
                 </button>
-                <button
+                <a href="{{ route('umkm.catalog') }}"
                     class="flex-1 md:flex-none px-6 py-3 border-2 border-primary-500 text-primary-600 font-bold rounded-xl hover:bg-primary-50 transition-all flex items-center justify-center gap-2 group">
                     <span>Lihat Layanan</span>
                     <i data-lucide="arrow-down" class="w-4 h-4 transition-transform group-hover:translate-y-1"></i>
-                </button>
+                </a>
             </div>
         </div>
 
-        <div class="mt-8 text-center max-w-2xl mx-auto">
-            <p class="text-neutral-600 leading-relaxed">
-                UMKM Name Cleaning Service adalah penyedia jasa kebersihan profesional yang berfokus pada kualitas dan kepuasan pelanggan. Kami menggunakan peralatan modern dan bahan pembersih ramah
-                lingkungan.
-            </p>
-        </div>
     </section>
 
     <section id="services" class="py-20 bg-neutral-50">
@@ -110,7 +110,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-neutral-100 group">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581578731117-104f2a863a30?w=600&q=80" alt="Deep Cleaning Sofa"
+                        <img src="https://images.pexels.com/photos/4401538/pexels-photo-4401538.jpeg" alt="Deep Cleaning Sofa"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute top-4 left-4">
                             <span class="px-3 py-1 bg-white/90 backdrop-blur-md text-xs font-bold text-neutral-900 rounded-lg shadow-sm">Best Seller</span>
@@ -125,16 +125,16 @@
                                 <p class="text-lg font-black text-primary-600">Rp 40.000</p>
                             </div>
                         </div>
-                        <button class="w-full py-3 bg-neutral-900 text-white font-bold rounded-xl hover:bg-neutral-800 transition-all flex items-center justify-center gap-2 group-hover:bg-primary-500">
+                        <a href="{{ route('umkm.catalog') }}" class="w-full py-3 bg-neutral-900 text-white font-bold rounded-xl hover:bg-neutral-800 transition-all flex items-center justify-center gap-2 group-hover:bg-primary-500">
                             <span>Pilih Layanan</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-neutral-100 group">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1527515637-62da7a0a1329?w=600&q=80" alt="General Cleaning"
+                        <img src="https://images.pexels.com/photos/4107284/pexels-photo-4107284.jpeg" alt="General Cleaning"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6">
@@ -155,7 +155,7 @@
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-neutral-100 group">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1616165529124-78332155f9ce?w=600&q=80" alt="Cuci AC Split"
+                        <img src="https://images.pexels.com/photos/24828656/pexels-photo-24828656.jpeg" alt="Cuci AC Split"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6">
@@ -176,7 +176,7 @@
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-neutral-100 group">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558317374-a354d5f8d429?w=600&q=80" alt="Cuci Karpet"
+                        <img src="https://images.pexels.com/photos/4176235/pexels-photo-4176235.jpeg" alt="Cuci Karpet"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6">
@@ -197,7 +197,7 @@
             </div>
 
             <div class="mt-12 text-center">
-                <a href="#" class="inline-flex items-center gap-2 text-neutral-500 hover:text-primary-600 font-semibold transition-colors">
+                <a href="{{ route('umkm.catalog') }}" class="inline-flex items-center gap-2 text-neutral-500 hover:text-primary-600 font-semibold transition-colors">
                     <span>Lihat Lebih Banyak</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>

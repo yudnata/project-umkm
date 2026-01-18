@@ -6,7 +6,6 @@ Route::get('/', function () {
     return view('pages.landing.home');
 })->name('home');
 
-// Auth Routes (placeholder - adjust according to your auth setup)
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
@@ -19,7 +18,14 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('forgot-password');
 
-// Temporary route for UMKM Preview
 Route::get('/umkm/preview', function () {
     return view('pages.umkm.home');
 })->name('umkm.preview');
+
+Route::get('/umkm/catalog', function () {
+    return view('pages.umkm.catalog');
+})->name('umkm.catalog');
+
+Route::get('/umkm/detail', function () {
+    return view('pages.umkm.detail');
+})->name('umkm.detail');

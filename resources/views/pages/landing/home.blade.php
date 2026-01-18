@@ -166,9 +166,9 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="craft" data-name="Pottery Art"
+                <a href="{{ route('umkm.preview') }}" class="mitra-card block group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="craft" data-name="Pottery Art"
                     data-animate>
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=400&h=300&fit=crop" alt="Pottery Art"
@@ -198,7 +198,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="mt-12 text-center">

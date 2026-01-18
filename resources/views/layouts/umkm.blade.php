@@ -13,33 +13,34 @@
 </head>
 
 <body class="bg-white text-neutral-900 antialiased">
-    <!-- Navbar UMKM -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center justify-between h-20">
-                <!-- Logo UMKM -->
-                <a href="#" class="flex items-center gap-2 group">
+                <a href="{{ route('home') }}" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
                         U
                     </div>
                     <span class="text-xl font-bold text-neutral-900 tracking-tight">UMKM<span class="text-primary-500">Name</span></span>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Home</a>
-                    <a href="#services" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Products</a>
-                    <a href="#about" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">About</a>
-                    <a href="#contact" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Contact</a>
+                    <a href="{{ route('home') }}" class="text-sm font-bold text-primary-600 bg-primary-50 px-3 py-1.5 rounded-lg hover:bg-primary-100 transition-colors flex items-center gap-1">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        Cari UMKM Lain
+                    </a>
+                    <div class="w-px h-6 bg-neutral-200 mx-2"></div>
+                    <a href="{{ route('umkm.preview') }}" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Home</a>
+                    <a href="{{ route('umkm.catalog') }}" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Products</a>
+                    <a href="{{ route('umkm.preview') }}#about" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">About</a>
+                    <a href="{{ route('umkm.preview') }}#contact" class="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Contact</a>
                 </div>
 
-                <!-- Auth Buttons -->
                 <div class="flex items-center gap-3">
                     <a href="#" class="px-5 py-2 text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">Login</a>
-                    <a href="#" class="px-5 py-2 bg-neutral-900 text-white text-sm font-bold rounded-full hover:bg-neutral-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Register</a>
+                    <a href="#"
+                        class="px-5 py-2 bg-neutral-900 text-white text-sm font-bold rounded-full hover:bg-neutral-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Register</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button class="md:hidden p-2 text-neutral-600 hover:text-primary-600">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -51,8 +52,7 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-neutral-100 pt-16 pb-8">
+    <footer id="contact" class="bg-white border-t border-neutral-100 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-1">
@@ -66,7 +66,7 @@
                         Memberikan jasa cleaning service profesional terbaik untuk hunian dan kantor Anda.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="font-bold text-neutral-900 mb-6">Menu</h4>
                     <ul class="space-y-4">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-neutral-400 text-sm">© 2024 UMKM Name. All rights reserved.</p>
                 <div class="flex gap-6">
@@ -125,4 +125,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
