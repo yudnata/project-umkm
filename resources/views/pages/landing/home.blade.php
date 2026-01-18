@@ -3,18 +3,13 @@
 @section('title', 'Platform UMKM - Digitalisasi Bisnis Anda')
 
 @section('content')
-    <!-- Hero Section - Background Image & Centered -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80" alt="Background UMKM" class="w-full h-full object-cover">
-            <!-- Overlay Gelap & Blur -->
             <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-            <!-- Gradient Overlay from Bottom for Blend -->
             <div class="absolute bottom-0 left-0 right-0 h-64 bg-linear-gradient-to-t from-black/80 to-transparent"></div>
         </div>
 
-        <!-- Content -->
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
 
             <h1 class="text-6xl md:text-7xl lg:text-9xl font-black leading-none mb-8 text-white tracking-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
@@ -38,7 +33,6 @@
             </div>
         </div>
 
-        <!-- Wave Bottom -->
         <div class="absolute -bottom-1 left-0 right-0 z-20">
             <svg class="w-full h-auto block align-middle" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path fill="#ffffff" fill-opacity="1"
@@ -48,15 +42,13 @@
         </div>
     </section>
 
-    <!-- Mitra UMKM Section -->
     <section id="mitra" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-black text-neutral-900 mb-4">Mitra UMKM Pilihan</h2>
+                <h2 class="text-4xl md:text-6xl font-black text-neutral-900 mb-4">Mitra UMKM Pilihan</h2>
                 <p class="text-lg text-neutral-600">Temukan ribuan UMKM berkualitas yang siap melayani kebutuhanmu</p>
             </div>
 
-            <!-- Search & Filter -->
             <div class="max-w-4xl mx-auto mb-12">
                 <div class="bg-white rounded-2xl shadow-md p-2 md:p-4 mb-8">
                     <div class="relative">
@@ -79,9 +71,7 @@
                 </div>
             </div>
 
-            <!-- Mitra Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="mitra-grid">
-                <!-- Card 1 -->
                 <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="kuliner" data-name="Kopi Senja">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=300&fit=crop" alt="Kopi Senja"
@@ -113,7 +103,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="jasa" data-name="Clean Pro">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Clean Pro"
@@ -145,7 +134,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="fashion" data-name="Batik Modern">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=300&fit=crop" alt="Batik Modern"
@@ -177,7 +165,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="craft" data-name="Pottery Art">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=400&h=300&fit=crop" alt="Pottery Art"
@@ -279,66 +266,51 @@
         </script>
     </section>
 
-    <!-- Join Section - Partner Types -->
     <section id="layanan" class="py-20 bg-neutral-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-3 mb-12">
-                <h2 class="text-3xl md:text-4xl font-black text-neutral-900">Join the platform</h2>
-                <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
-                    <i data-lucide="arrow-down" class="w-4 h-4 text-white"></i>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Mengapa Memilih Platform Kami</h2>
+                <p class="text-lg text-neutral-600">Platform terpercaya untuk membantu UMKM berkembang di era digital</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 - Jadi Seller -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="group" data-animate>
-                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-primary-200 transition-all">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-primary-500 rounded-2xl flex items-center justify-center">
-                                <i data-lucide="shopping-bag" class="w-6 h-6 text-white"></i>
-                            </div>
-                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">POPULER</span>
+                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-primary-200 hover:shadow-lg transition-all text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="mouse-pointer-click" class="w-8 h-8 text-primary-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Jadi Seller</h3>
-                        <p class="text-neutral-600 mb-6">Buka toko online, jual produk atau jasa, dan terima pesanan dari pelanggan di seluruh Indonesia.</p>
-                        <a href="{{ route('register') ?? '#' }}" class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-3 transition-all">
-                            <span>Daftar Sekarang</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Mudah Diakses</h3>
+                        <p class="text-neutral-600">Akses platform kapan saja dan dimana saja melalui perangkat apapun.</p>
                     </div>
                 </div>
 
-                <!-- Card 2 - Jadi Mitra Layanan -->
                 <div class="group" data-animate>
-                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-secondary-200 transition-all">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-secondary-500 rounded-2xl flex items-center justify-center">
-                                <i data-lucide="wrench" class="w-6 h-6 text-white"></i>
-                            </div>
+                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-secondary-200 hover:shadow-lg transition-all text-center">
+                        <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="layers" class="w-8 h-8 text-secondary-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Jadi Mitra Layanan</h3>
-                        <p class="text-neutral-600 mb-6">Tawarkan jasa cleaning, laundry, salon, atau layanan lainnya. Dapatkan pelanggan tanpa repot promosi.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-secondary-600 font-semibold group-hover:gap-3 transition-all">
-                            <span>Pelajari Lebih</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Beragam</h3>
+                        <p class="text-neutral-600">Tersedia berbagai kategori layanan dan produk dari UMKM terpilih.</p>
                     </div>
                 </div>
 
-                <!-- Card 3 - Jadi Partner -->
                 <div class="group" data-animate>
-                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-accent-200 transition-all">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-accent-500 rounded-2xl flex items-center justify-center">
-                                <i data-lucide="handshake" class="w-6 h-6 text-white"></i>
-                            </div>
+                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-accent-200 hover:shadow-lg transition-all text-center">
+                        <div class="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="wallet" class="w-8 h-8 text-accent-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Jadi Business Partner</h3>
-                        <p class="text-neutral-600 mb-6">Kerjasama bisnis untuk menjangkau lebih banyak pelanggan. Cocok untuk franchise dan korporat.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-accent-600 font-semibold group-hover:gap-3 transition-all">
-                            <span>Hubungi Kami</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Harga Terjangkau</h3>
+                        <p class="text-neutral-600">Biaya berlangganan yang terjangkau untuk semua skala bisnis.</p>
+                    </div>
+                </div>
+
+                <div class="group" data-animate>
+                    <div class="bg-white rounded-3xl p-8 h-full border border-neutral-100 hover:border-primary-200 hover:shadow-lg transition-all text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-3">Dapat Dipercaya</h3>
+                        <p class="text-neutral-600">Platform aman dan terpercaya dengan sistem keamanan terjamin.</p>
                     </div>
                 </div>
             </div>
@@ -347,47 +319,86 @@
 
 
 
-    <!-- Perks Section - Photos -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-black text-center text-neutral-900 mb-4">Perks jadi bagian dari kami</h2>
-            <p class="text-lg text-neutral-600 text-center mb-12 max-w-2xl mx-auto">Nikmati berbagai keuntungan yang bikin bisnis kamu makin berkembang</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Semua Fitur yang Anda Butuhkan</h2>
+                <p class="text-lg text-neutral-600">Lengkapi kebutuhan bisnis Anda dengan fitur-fitur yang kami sediakan</p>
+            </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Perk 1 -->
-                <div class="group relative rounded-3xl overflow-hidden h-80" data-animate>
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="Pendapatan Bertambah" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-linear-to-t from-neutral-900/90 via-neutral-900/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 class="text-xl font-bold mb-2">Pendapatan Bertambah</h3>
-                        <p class="text-white/80 text-sm">Jangkau lebih banyak pelanggan, tingkatkan omzet bisnis kamu.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="md:col-span-2 bg-linear-to-br from-primary-500 to-primary-600 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl transition-all relative overflow-hidden group min-h-[220px]"
+                    data-animate>
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                            <i data-lucide="globe" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Website Instan</h3>
+                        <p class="text-white/80">Miliki website toko online profesional tanpa biaya tambahan.</p>
                     </div>
                 </div>
 
-                <!-- Perk 2 -->
-                <div class="group relative rounded-3xl overflow-hidden h-80" data-animate>
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Pembayaran Praktis" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-linear-to-t from-neutral-900/90 via-neutral-900/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 class="text-xl font-bold mb-2">Pembayaran Praktis</h3>
-                        <p class="text-white/80 text-sm">Terima berbagai metode pembayaran, pencairan cepat ke rekening.</p>
+                <div class="bg-neutral-900 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all group min-h-[220px]" data-animate>
+                    <div class="w-12 h-12 bg-secondary-500 rounded-xl flex items-center justify-center">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-2">Dashboard</h3>
+                        <p class="text-neutral-400 text-sm">Kelola bisnis dalam satu dashboard.</p>
                     </div>
                 </div>
 
-                <!-- Perk 3 -->
-                <div class="group relative rounded-3xl overflow-hidden h-80" data-animate>
-                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=600&h=400&fit=crop" alt="Support 24/7" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-linear-to-t from-neutral-900/90 via-neutral-900/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 class="text-xl font-bold mb-2">Support 24/7</h3>
-                        <p class="text-white/80 text-sm">Tim kami siap bantu kapan saja. Ada masalah? Langsung hubungi!</p>
+                <div class="bg-linear-to-br from-accent-400 to-accent-500 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all group min-h-[220px]" data-animate>
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                        <i data-lucide="package" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-2">Kelola Produk</h3>
+                        <p class="text-white/80 text-sm">Atur katalog produk dengan mudah.</p>
+                    </div>
+                </div>
+
+                <div class="bg-linear-to-br from-emerald-500 to-green-600 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all group min-h-[220px]" data-animate>
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                        <i data-lucide="wallet" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-2">Pembayaran</h3>
+                        <p class="text-white/80 text-sm">QRIS, Transfer, E-Wallet.</p>
+                    </div>
+                </div>
+
+                <div class="bg-linear-to-br from-blue-500 to-indigo-600 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all group min-h-[220px]" data-animate>
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                        <i data-lucide="calendar-check" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-2">Booking</h3>
+                        <p class="text-white/80 text-sm">Penjadwalan otomatis.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 bg-linear-to-r from-purple-600 to-violet-600 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all group min-h-[220px] relative overflow-hidden"
+                    data-animate>
+                    <div class="absolute -right-16 -top-16 w-48 h-48 bg-white/5 rounded-full"></div>
+                    <div class="flex items-center gap-3 relative z-10">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                            <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                            <i data-lucide="headphones" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="mt-auto relative z-10">
+                        <h3 class="text-xl font-bold text-white mb-2">Mobile & Support 24/7</h3>
+                        <p class="text-white/80 text-sm">Responsif di semua perangkat. Tim support siap membantu.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section - Dark -->
     <section id="fitur" class="py-20 bg-neutral-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -396,7 +407,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Category 1 - Jasa & Layanan -->
                 <div class="bg-primary-500 rounded-3xl p-8" data-animate>
                     <div class="flex items-center gap-3 mb-6">
                         <i data-lucide="sparkles" class="w-6 h-6"></i>
@@ -426,7 +436,6 @@
                     </ul>
                 </div>
 
-                <!-- Category 2 - Makanan & Minuman -->
                 <div class="bg-white text-neutral-900 rounded-3xl p-8" data-animate>
                     <div class="flex items-center gap-3 mb-6">
                         <i data-lucide="utensils" class="w-6 h-6 text-secondary-500"></i>
@@ -456,7 +465,6 @@
                     </ul>
                 </div>
 
-                <!-- Category 3 - Solusi Bisnis -->
                 <div class="bg-neutral-800 rounded-3xl p-8" data-animate>
                     <div class="flex items-center gap-3 mb-6">
                         <i data-lucide="briefcase" class="w-6 h-6 text-accent-400"></i>
@@ -489,43 +497,58 @@
         </div>
     </section>
 
-    <!-- How It Works - Simple -->
     <section id="cara-kerja" class="py-20 bg-neutral-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-black text-center text-neutral-900 mb-4">Gimana caranya?</h2>
-            <p class="text-lg text-neutral-600 text-center mb-16">Cuma butuh 4 langkah simpel</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Cara Kerja</h2>
+                <p class="text-lg text-neutral-600">Mulai perjalanan digital bisnis Anda dalam 4 langkah mudah</p>
+            </div>
 
             <div class="grid md:grid-cols-4 gap-8">
-                @php
-                    $steps = [
-                        ['num' => '01', 'title' => 'Daftar', 'desc' => 'Buat akun gratis, isi data bisnis kamu.', 'color' => 'primary'],
-                        ['num' => '02', 'title' => 'Setup Toko', 'desc' => 'Tambah produk atau layanan yang mau dijual.', 'color' => 'secondary'],
-                        ['num' => '03', 'title' => 'Go Live', 'desc' => 'Toko kamu online! Mulai terima order.', 'color' => 'accent'],
-                        ['num' => '04', 'title' => 'Cuan!', 'desc' => 'Kelola bisnis, pantau penjualan, hitung profit.', 'color' => 'secondary'],
-                    ];
-                @endphp
-
-                @foreach($steps as $step)
-                    <div class="text-center" data-animate>
-                        <div class="w-16 h-16 bg-{{ $step['color'] }}-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-black">
-                            {{ $step['num'] }}
-                        </div>
-                        <h3 class="text-xl font-bold text-neutral-900 mb-2">{{ $step['title'] }}</h3>
-                        <p class="text-neutral-600">{{ $step['desc'] }}</p>
+                <div class="text-center relative" data-animate>
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-black relative z-10">
+                        1
                     </div>
-                @endforeach
+                    <div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-neutral-200 z-0"></div>
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Daftar Akun</h3>
+                    <p class="text-neutral-600">Buat akun gratis dan lengkapi profil bisnis Anda.</p>
+                </div>
+
+                <div class="text-center relative" data-animate>
+                    <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-black relative z-10">
+                        2
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-neutral-200 z-0"></div>
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Setup Toko</h3>
+                    <p class="text-neutral-600">Tambahkan produk atau layanan yang ingin dijual.</p>
+                </div>
+
+                <div class="text-center relative" data-animate>
+                    <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-black relative z-10">
+                        3
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-neutral-200 z-0"></div>
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Terima Order</h3>
+                    <p class="text-neutral-600">Toko online! Mulai terima pesanan dari pelanggan.</p>
+                </div>
+
+                <div class="text-center" data-animate>
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-black">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Raih Untung</h3>
+                    <p class="text-neutral-600">Kelola bisnis dan pantau perkembangan pendapatan.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section id="harga" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-black text-center text-neutral-900 mb-4">Pilih paket yang cocok</h2>
+            <h2 class="text-4xl md:text-5xl font-black text-center text-neutral-900 mb-4">Pilih paket yang cocok</h2>
             <p class="text-lg text-neutral-600 text-center mb-16">Mulai dari gratis, upgrade kapan aja</p>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Free Plan -->
                 <div class="bg-neutral-50 rounded-3xl p-8 border-2 border-neutral-200" data-animate>
                     <div class="flex items-center justify-between mb-6">
                         <div>
@@ -566,7 +589,6 @@
                     </a>
                 </div>
 
-                <!-- Pro Plan -->
                 <div class="bg-primary-500 rounded-3xl p-8 text-white relative overflow-hidden" data-animate>
                     <div class="flex items-center justify-between mb-6">
                         <div>
@@ -610,7 +632,6 @@
         </div>
     </section>
 
-    <!-- CTA Section - App Download Style -->
     <section class="py-20 bg-primary-500 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-40 h-40 border-4 border-white rounded-full"></div>
@@ -622,16 +643,16 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="text-white">
                     <h2 class="text-4xl md:text-5xl font-black mb-6">
-                        Siap mulai jualan?<br>
-                        <span class="text-neutral-900">Daftar sekarang!</span>
+                        Punya UMKM?<br>
+                        <span class="text-neutral-900">Bergabunglah dengan Kami</span>
                     </h2>
                     <p class="text-lg text-white/80 mb-8 max-w-md">
-                        Ribuan UMKM sudah bergabung dan merasakan manfaatnya. Sekarang giliran kamu!
+                        Bergabunglah dengan ribuan UMKM lainnya yang telah sukses berjualan online. Daftarkan bisnis Anda sekarang!
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="{{ route('register') ?? '#' }}"
                             class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-600 font-bold rounded-full hover:bg-neutral-100 transition-all shadow-lg">
-                            <span>Daftar Gratis</span>
+                            <span>Daftar Sekarang</span>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-bold rounded-full hover:bg-primary-700 transition-all border-2 border-white/30">
