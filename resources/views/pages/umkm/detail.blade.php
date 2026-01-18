@@ -144,9 +144,10 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <button class="flex-1 py-3.5 bg-neutral-900 text-white font-bold rounded-xl hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl">
+                            <a href="{{ route('umkm.booking') }}"
+                                class="flex-1 py-3.5 bg-neutral-900 text-white font-bold rounded-xl hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl text-center">
                                 Book Now
-                            </button>
+                            </a>
                             <button class="flex-1 py-3.5 bg-white border border-neutral-200 text-neutral-700 font-bold rounded-xl hover:bg-neutral-50 transition-all">
                                 Contact for Survey
                             </button>
@@ -159,91 +160,378 @@
             </div>
 
             <div class="bg-white rounded-3xl border border-neutral-100 shadow-sm overflow-hidden mb-16">
-                <div class="flex border-b border-neutral-100 overflow-x-auto">
-                    <button class="px-8 py-5 text-sm font-bold text-primary-600 border-b-2 border-primary-600 bg-primary-50/50">Description</button>
-                    <button class="px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 transition-colors">Terms & Conditions</button>
-                    <button class="px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 transition-colors">FAQ</button>
-                    <button class="px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 transition-colors">Reviews</button>
+                <div class="flex border-b border-neutral-100 overflow-x-auto" id="tab-headers">
+                    <button onclick="switchTab('description')" id="tab-btn-description"
+                        class="tab-btn px-8 py-5 text-sm font-bold text-primary-600 border-b-2 border-primary-600 bg-primary-50/50 whitespace-nowrap transition-colors">Description</button>
+                    <button onclick="switchTab('portfolio')" id="tab-btn-portfolio"
+                        class="tab-btn px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 border-b-2 border-transparent hover:bg-neutral-50 whitespace-nowrap transition-colors">Portfolio
+                        & Before-After</button>
+                    <button onclick="switchTab('reviews')" id="tab-btn-reviews"
+                        class="tab-btn px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 border-b-2 border-transparent hover:bg-neutral-50 whitespace-nowrap transition-colors">Reviews</button>
+                    <button onclick="switchTab('faq')" id="tab-btn-faq"
+                        class="tab-btn px-8 py-5 text-sm font-bold text-neutral-500 hover:text-neutral-900 border-b-2 border-transparent hover:bg-neutral-50 whitespace-nowrap transition-colors">FAQ</button>
                 </div>
 
                 <div class="p-8 md:p-12">
-                    <div class="max-w-4xl">
-                        <h3 class="text-2xl font-black text-neutral-900 mb-6">Service Description</h3>
-                        <div class="prose prose-neutral max-w-none text-neutral-600 mb-12">
-                            <p class="mb-4">
-                                Our Deep Cleaning Service is designed to provide a comprehensive cleaning solution for residential and commercial properties. We use state-of-the-art equipment and
-                                environmentally friendly cleaning products to ensure the best results while maintaining safety standards.
-                            </p>
-                            <p class="mb-4">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum.
-                            </p>
+                    <div id="tab-content-description" class="tab-content block">
+                        <div class="max-w-4xl">
+                            <h3 class="text-2xl font-black text-neutral-900 mb-6">Service Description</h3>
+                            <div class="prose prose-neutral max-w-none text-neutral-600 mb-12">
+                                <p class="mb-4">
+                                    Our Deep Cleaning Service is designed to provide a comprehensive cleaning solution for residential and commercial properties. We use state-of-the-art equipment and
+                                    environmentally friendly cleaning products to ensure the best results while maintaining safety standards.
+                                </p>
+                                <p class="mb-4">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-neutral-900 mb-6">Process</h3>
+                            <div class="space-y-8 relative">
+                                <div class="relative flex items-start group">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                        <span class="font-bold text-sm">1</span>
+                                    </div>
+                                    <div class="ml-16">
+                                        <h4 class="text-base font-bold text-neutral-900">Initial Consultation</h4>
+                                        <p class="mt-1 text-sm text-neutral-500">Contact us to discuss your cleaning needs and schedule initial consultation.</p>
+                                    </div>
+                                </div>
+                                <div class="relative flex items-start group">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                        <span class="font-bold text-sm">2</span>
+                                    </div>
+                                    <div class="ml-16">
+                                        <h4 class="text-base font-bold text-neutral-900">Survey and Negotiation</h4>
+                                        <p class="mt-1 text-sm text-neutral-500">Our team visits your property to assess requirements and negotiate scope of work.</p>
+                                    </div>
+                                </div>
+                                <div class="relative flex items-start group">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                        <span class="font-bold text-sm">3</span>
+                                    </div>
+                                    <div class="ml-16">
+                                        <h4 class="text-base font-bold text-neutral-900">Price Agreement</h4>
+                                        <p class="mt-1 text-sm text-neutral-500">Final price confirmation after survey and negotiation process.</p>
+                                    </div>
+                                </div>
+                                <div class="relative flex items-start group">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                        <span class="font-bold text-sm">4</span>
+                                    </div>
+                                    <div class="ml-16">
+                                        <h4 class="text-base font-bold text-neutral-900">Pro-Invoice</h4>
+                                        <p class="mt-1 text-sm text-neutral-500">Initial invoice issued (final price may adjust based on actual field conditions).</p>
+                                    </div>
+                                </div>
+                                <div class="relative flex items-start group">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                        <span class="font-bold text-sm">5</span>
+                                    </div>
+                                    <div class="ml-16">
+                                        <h4 class="text-base font-bold text-neutral-900">Service Execution</h4>
+                                        <p class="mt-1 text-sm text-neutral-500">Our professional team performs the deep cleaning service.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <h3 class="text-lg font-bold text-neutral-900 mb-6">Process</h3>
-                        <div class="space-y-8 relative">
-                            <div class="relative flex items-start group">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                    <span class="font-bold text-sm">1</span>
+                    <div id="tab-content-portfolio" class="tab-content hidden">
+                        <div class="max-w-4xl mx-auto">
+                            <h3 class="text-2xl font-black text-neutral-900 mb-2">Our Work Portfolio</h3>
+                            <h4 class="text-lg font-bold text-neutral-500 mb-8">Before & After Results</h4>
+
+                            <div class="relative w-full aspect-video rounded-3xl overflow-hidden cursor-ew-resize select-none shadow-lg mb-12 group" id="comparison-container">
+                                <img src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg" class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" alt="After">
+                                <div class="absolute top-1/2 right-12 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-black tracking-widest pointer-events-none z-20 shadow-sm">AFTER</div>
+
+                                <div id="comparison-overlay" class="absolute top-0 left-0 h-full w-1/2 overflow-hidden border-r-4 border-white z-10">
+                                    <img src="https://images.pexels.com/photos/6045339/pexels-photo-6045339.jpeg" class="absolute top-0 left-0 w-[200%] max-w-none h-full object-cover pointer-events-none"
+                                        id="comparison-before-img" alt="Before">
+                                    <div
+                                        class="absolute top-1/2 left-12 bg-neutral-900/90 backdrop-blur-md text-white px-4 py-2 rounded-xl text-xs font-black tracking-widest pointer-events-none z-20 shadow-sm">
+                                        BEFORE</div>
                                 </div>
-                                <div class="ml-16">
-                                    <h4 class="text-base font-bold text-neutral-900">Initial Consultation</h4>
-                                    <p class="mt-1 text-sm text-neutral-500">Contact us to discuss your cleaning needs and schedule initial consultation.</p>
+
+                                <div id="comparison-handle" class="absolute top-0 left-1/2 w-10 h-full -ml-5 z-30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-neutral-100">
+                                        <i data-lucide="chevrons-left-right" class="w-5 h-5 text-neutral-900"></i>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="relative flex items-start group">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                    <span class="font-bold text-sm">2</span>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="rounded-2xl overflow-hidden aspect-square relative group cursor-pointer">
+                                    <img src="https://images.pexels.com/photos/4107284/pexels-photo-4107284.jpeg"
+                                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                                 </div>
-                                <div class="ml-16">
-                                    <h4 class="text-base font-bold text-neutral-900">Survey and Negotiation</h4>
-                                    <p class="mt-1 text-sm text-neutral-500">Our team visits your property to assess requirements and negotiate scope of work.</p>
+                                <div class="rounded-2xl overflow-hidden aspect-square relative group cursor-pointer">
+                                    <img src="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg"
+                                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                                </div>
+                                <div class="rounded-2xl overflow-hidden aspect-square relative group cursor-pointer">
+                                    <img src="https://images.pexels.com/photos/4176235/pexels-photo-4176235.jpeg"
+                                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                                </div>
+                                <div class="rounded-2xl overflow-hidden aspect-square relative group cursor-pointer bg-neutral-100 flex items-center justify-center">
+                                    <span class="text-neutral-500 font-bold">+24 More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-content-reviews" class="tab-content hidden">
+                        <div class="max-w-4xl mx-auto">
+                            <h3 class="text-2xl font-black text-neutral-900 mb-8">Customer Reviews</h3>
+
+                            <div class="bg-neutral-50 rounded-2xl p-8 mb-10 flex flex-col md:flex-row gap-12 items-center">
+                                <div class="text-center">
+                                    <div class="text-6xl font-black text-neutral-900 mb-2">4.8</div>
+                                    <div class="flex gap-1 justify-center mb-2 text-yellow-500">
+                                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    </div>
+                                    <p class="text-sm text-neutral-500">Based on 1,873 reviews</p>
+                                </div>
+
+                                <div class="flex-1 w-full space-y-3">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-8 text-sm font-bold text-neutral-500">5 <i data-lucide="star" class="w-3 h-3 inline"></i></div>
+                                        <div class="flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-neutral-900 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                        <div class="w-8 text-xs text-neutral-400 text-right">80%</div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-8 text-sm font-bold text-neutral-500">4 <i data-lucide="star" class="w-3 h-3 inline"></i></div>
+                                        <div class="flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-neutral-900 rounded-full" style="width: 15%"></div>
+                                        </div>
+                                        <div class="w-8 text-xs text-neutral-400 text-right">15%</div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-8 text-sm font-bold text-neutral-500">3 <i data-lucide="star" class="w-3 h-3 inline"></i></div>
+                                        <div class="flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-neutral-900 rounded-full" style="width: 3%"></div>
+                                        </div>
+                                        <div class="w-8 text-xs text-neutral-400 text-right">3%</div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-8 text-sm font-bold text-neutral-500">2 <i data-lucide="star" class="w-3 h-3 inline"></i></div>
+                                        <div class="flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-neutral-500 rounded-full" style="width: 1%"></div>
+                                        </div>
+                                        <div class="w-8 text-xs text-neutral-400 text-right">1%</div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-8 text-sm font-bold text-neutral-500">1 <i data-lucide="star" class="w-3 h-3 inline"></i></div>
+                                        <div class="flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-neutral-500 rounded-full" style="width: 1%"></div>
+                                        </div>
+                                        <div class="w-8 text-xs text-neutral-400 text-right">1%</div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="relative flex items-start group">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                    <span class="font-bold text-sm">3</span>
-                                </div>
-                                <div class="ml-16">
-                                    <h4 class="text-base font-bold text-neutral-900">Price Agreement</h4>
-                                    <p class="mt-1 text-sm text-neutral-500">Final price confirmation after survey and negotiation process.</p>
-                                </div>
+                            <div class="flex gap-2 mb-8 overflow-x-auto pb-2">
+                                <button class="px-4 py-2 bg-neutral-900 text-white text-xs font-bold rounded-full">All Reviews</button>
+                                <button class="px-4 py-2 bg-white border border-neutral-200 text-neutral-600 text-xs font-bold rounded-full hover:bg-neutral-50">With Photos (401)</button>
+                                <button class="px-4 py-2 bg-white border border-neutral-200 text-neutral-600 text-xs font-bold rounded-full hover:bg-neutral-50">Verified Purchase</button>
                             </div>
 
-                            <div class="relative flex items-start group">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                    <span class="font-bold text-sm">4</span>
+                            <div class="space-y-8">
+                                <div class="border-b border-neutral-100 pb-8 last:border-0">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold">BS</div>
+                                            <div>
+                                                <h5 class="font-bold text-neutral-900 text-sm">Budi Santoso</h5>
+                                                <div class="flex text-yellow-500">
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs text-neutral-400">2 weeks ago</span>
+                                    </div>
+                                    <p class="text-neutral-600 text-sm leading-relaxed mb-4">
+                                        Pelayanan sangat memuaskan! Tim datang tepat waktu dan bekerja dengan sangat profesional. Rumah saya jadi bersih seperti baru lagi. Harga juga sangat reasonable
+                                        untuk kualitas yang diberikan.
+                                    </p>
+                                    <div class="flex gap-2 mb-4">
+                                        <img src="https://images.pexels.com/photos/4107284/pexels-photo-4107284.jpeg" class="w-20 h-20 rounded-lg object-cover cursor-pointer hover:opacity-80">
+                                        <img src="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg" class="w-20 h-20 rounded-lg object-cover cursor-pointer hover:opacity-80">
+                                    </div>
+                                    <button class="flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-neutral-900">
+                                        <i data-lucide="thumbs-up" class="w-4 h-4"></i>
+                                        Helpful (24)
+                                    </button>
                                 </div>
-                                <div class="ml-16">
-                                    <h4 class="text-base font-bold text-neutral-900">Pro-Invoice</h4>
-                                    <p class="mt-1 text-sm text-neutral-500">Initial invoice issued (final price may adjust based on actual field conditions).</p>
+
+                                <div class="border-b border-neutral-100 pb-8 last:border-0">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">SW</div>
+                                            <div>
+                                                <h5 class="font-bold text-neutral-900 text-sm">Sarah Wijaya</h5>
+                                                <div class="flex text-yellow-500">
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs text-neutral-400">3 weeks ago</span>
+                                    </div>
+                                    <p class="text-neutral-600 text-sm leading-relaxed mb-4">
+                                        Sangat puas dengan hasilnya. Mereka membersihkan setiap sudut dengan sempurna dan sangat hati-hati dengan furniture. Staff nya ramah dan komunikatif. Pasti akan
+                                        order lagi untuk maintenance rutin!
+                                    </p>
+                                    <button class="flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-neutral-900">
+                                        <i data-lucide="thumbs-up" class="w-4 h-4"></i>
+                                        Helpful (18)
+                                    </button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="relative flex items-start group">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white bg-neutral-100 shadow shrink-0 z-10 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                    <span class="font-bold text-sm">5</span>
+                    <div id="tab-content-faq" class="tab-content hidden">
+                        <div class="max-w-4xl mx-auto">
+                            <h3 class="text-2xl font-black text-neutral-900 mb-8">Frequently Asked Questions</h3>
+                            <div class="space-y-4">
+                                <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                                    <button class="w-full flex justify-between items-center p-6 bg-white hover:bg-neutral-50 transition-colors text-left" onclick="toggleAccordion(this)">
+                                        <span class="font-bold text-neutral-900">Apakah saya perlu booking jauh-jauh hari?</span>
+                                        <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden p-6 pt-0 bg-white border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed">
+                                        Minimum booking adalah H-1 (tidak bisa same day service). Namun kami sangat merekomendasikan untuk booking minimal H-2 atau lebih untuk mendapatkan slot waktu
+                                        terbaik, terutama untuk weekend atau hari libur yang biasanya lebih cepat penuh.
+                                    </div>
                                 </div>
-                                <div class="ml-16">
-                                    <h4 class="text-base font-bold text-neutral-900">Service Execution</h4>
-                                    <p class="mt-1 text-sm text-neutral-500">Our professional team performs the deep cleaning service.</p>
+
+                                <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                                    <button class="w-full flex justify-between items-center p-6 bg-white hover:bg-neutral-50 transition-colors text-left" onclick="toggleAccordion(this)">
+                                        <span class="font-bold text-neutral-900">Apakah saya perlu menyediakan alat dan bahan pembersih?</span>
+                                        <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden p-6 pt-0 bg-white border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed">
+                                        Tidak perlu. Tim kami akan membawa semua peralatan (vacuum cleaner, mesin poles, dll) dan bahan pembersih profesional yang dibutuhkan. Anda hanya perlu menyediakan
+                                        akses air dan listrik.
+                                    </div>
+                                </div>
+
+                                <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                                    <button class="w-full flex justify-between items-center p-6 bg-white hover:bg-neutral-50 transition-colors text-left" onclick="toggleAccordion(this)">
+                                        <span class="font-bold text-neutral-900">Bagaimana jika saya perlu reschedule?</span>
+                                        <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden p-6 pt-0 bg-white border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed">
+                                        Anda dapat melakukan reschedule maksimal 24 jam sebelum jadwal pengerjaan tanpa biaya tambahan. Perubahan jadwal di bawah 24 jam mungkin dikenakan biaya
+                                        administrasi.
+                                    </div>
+                                </div>
+
+                                <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                                    <button class="w-full flex justify-between items-center p-6 bg-white hover:bg-neutral-50 transition-colors text-left" onclick="toggleAccordion(this)">
+                                        <span class="font-bold text-neutral-900">Area mana saja yang dilayani?</span>
+                                        <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden p-6 pt-0 bg-white border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed">
+                                        Saat ini kami melayani seluruh area Denpasar, Badung (Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua), dan Gianyar (Ubud). Hubungi kami untuk konfirmasi area spesifik
+                                        Anda.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                function switchTab(tabId) {
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('text-primary-600', 'border-primary-600', 'bg-primary-50/50');
+                        btn.classList.add('text-neutral-500', 'border-transparent');
+                    });
+
+                    const activeBtn = document.getElementById('tab-btn-' + tabId);
+                    activeBtn.classList.remove('text-neutral-500', 'border-transparent');
+                    activeBtn.classList.add('text-primary-600', 'border-primary-600', 'bg-primary-50/50');
+
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById('tab-content-' + tabId).classList.remove('hidden');
+
+                    lucide.createIcons();
+                }
+
+                function toggleAccordion(btn) {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+
+                const container = document.getElementById('comparison-container');
+                const overlay = document.getElementById('comparison-overlay');
+                const handle = document.getElementById('comparison-handle');
+                const beforeImg = document.getElementById('comparison-before-img');
+
+                if (container && overlay && handle && beforeImg) {
+                    let isDragging = false;
+
+                    const move = (e) => {
+                        const rect = container.getBoundingClientRect();
+                        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+                        const width = container.offsetWidth;
+                        let percentage = (x / width) * 100;
+
+                        percentage = Math.max(0, Math.min(100, percentage));
+
+                        overlay.style.width = percentage + '%';
+                        handle.style.left = percentage + '%';
+                    };
+
+                    container.addEventListener('mousemove', (e) => {
+                        move(e);
+                    });
+
+                    container.addEventListener('touchmove', (e) => {
+                        move(e);
+                    }, { passive: true });
+                }
+            </script>
 
             <h3 class="text-2xl font-black text-neutral-900 mb-8">You May Also Like</h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">

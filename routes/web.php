@@ -29,3 +29,11 @@ Route::get('/umkm/catalog', function () {
 Route::get('/umkm/detail', function () {
     return view('pages.umkm.detail');
 })->name('umkm.detail');
+
+Route::get('/umkm/booking', function () {
+    return view('pages.umkm.booking');
+})->name('umkm.booking');
+
+Route::get('/umkm/booking-success', function () {
+    return view('pages.umkm.booking-success');
+})->name('umkm.booking-success');
