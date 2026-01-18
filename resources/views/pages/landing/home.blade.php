@@ -12,17 +12,17 @@
 
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
 
-            <h1 class="text-6xl md:text-7xl lg:text-9xl font-black leading-none mb-8 text-white tracking-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
-                Digitalisasi<br><span class="text-primary-400">UMKM</span>
+            <h1 class="text-5xl md:text-6xl lg:text-8xl font-black leading-none mb-8 text-white tracking-tight drop-shadow-lg">
+                <span class="hero-text-reveal block" style="animation-delay: 0.1s;">Digitalisasi UMKM</span>
             </h1>
 
-            <p class="text-xl md:text-2xl text-neutral-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow animate-fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-xl md:text-xl text-neutral-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow hero-text-reveal" style="animation-delay: 0.5s;">
                 Platform yang bikin jualan jadi gampang. Kelola toko, terima order, dan kembangkan bisnis—semua di satu tempat.
             </p>
 
-            <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="flex flex-wrap justify-center gap-4 hero-text-reveal" style="animation-delay: 0.7s;">
                 <a href="{{ route('register') ?? '#' }}"
-                    class="inline-flex items-center gap-2 px-10 py-5 bg-primary-500 text-white font-bold text-lg rounded-full hover:bg-primary-600 transition-all shadow-[0_0_30px_rgba(0,170,19,0.5)] hover:scale-105">
+                    class="inline-flex items-center gap-2 px-10 py-5 bg-primary-500 text-white font-bold text-lg rounded-full hover:bg-primary-600 transition-all shadow-[0_0_20px_rgba(0,170,19,0.5)] hover:scale-105">
                     <span>Mulai Gratis</span>
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </a>
@@ -44,7 +44,7 @@
 
     <section id="mitra" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate>
                 <h2 class="text-4xl md:text-6xl font-black text-neutral-900 mb-4">Mitra UMKM Pilihan</h2>
                 <p class="text-lg text-neutral-600">Temukan ribuan UMKM berkualitas yang siap melayani kebutuhanmu</p>
             </div>
@@ -72,7 +72,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="mitra-grid">
-                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="kuliner" data-name="Kopi Senja">
+                <a href="{{ route('umkm.preview') }}" class="mitra-card block group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="kuliner" data-name="Kopi Senja"
+                    data-animate>
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=300&fit=crop" alt="Kopi Senja"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -101,9 +102,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="jasa" data-name="Clean Pro">
+                <a href="{{ route('umkm.preview') }}" class="mitra-card block group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="jasa" data-name="Clean Pro"
+                    data-animate>
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Clean Pro"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -132,9 +134,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="fashion" data-name="Batik Modern">
+                <a href="{{ route('umkm.preview') }}" class="mitra-card block group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="fashion" data-name="Batik Modern"
+                    data-animate>
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=300&fit=crop" alt="Batik Modern"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -165,7 +168,8 @@
                     </div>
                 </div>
 
-                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="craft" data-name="Pottery Art">
+                <div class="mitra-card group bg-white rounded-3xl overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-300" data-category="craft" data-name="Pottery Art"
+                    data-animate>
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=400&h=300&fit=crop" alt="Pottery Art"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -212,16 +216,13 @@
                 const filterBtns = document.querySelectorAll('.filter-btn');
                 const cards = document.querySelectorAll('.mitra-card');
 
-                // Category Filter
                 filterBtns.forEach(btn => {
                     btn.addEventListener('click', () => {
-                        // Remove active class from all
                         filterBtns.forEach(b => {
                             b.classList.remove('active', 'bg-neutral-900', 'text-white');
                             b.classList.add('bg-white', 'text-neutral-600');
                         });
 
-                        // Add active class to clicked
                         btn.classList.remove('bg-white', 'text-neutral-600');
                         btn.classList.add('active', 'bg-neutral-900', 'text-white');
 
@@ -230,7 +231,6 @@
                     });
                 });
 
-                // Search Filter
                 searchInput.addEventListener('input', (e) => {
                     const activeBtn = document.querySelector('.filter-btn.active');
                     const category = activeBtn.dataset.category;
@@ -249,7 +249,6 @@
 
                         if (matchesCategory && matchesSearch) {
                             card.style.display = 'block';
-                            // Add animation
                             card.style.opacity = '0';
                             card.style.transform = 'translateY(20px)';
                             setTimeout(() => {
@@ -268,7 +267,7 @@
 
     <section id="layanan" class="py-20 bg-neutral-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate>
                 <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Mengapa Memilih Platform Kami</h2>
                 <p class="text-lg text-neutral-600">Platform terpercaya untuk membantu UMKM berkembang di era digital</p>
             </div>
@@ -321,7 +320,7 @@
 
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate>
                 <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Semua Fitur yang Anda Butuhkan</h2>
                 <p class="text-lg text-neutral-600">Lengkapi kebutuhan bisnis Anda dengan fitur-fitur yang kami sediakan</p>
             </div>
@@ -401,7 +400,7 @@
 
     <section id="fitur" class="py-20 bg-neutral-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-animate>
                 <h2 class="text-3xl md:text-4xl font-black mb-4">Kami bantu kamu navigasi bisnis dengan mudah</h2>
                 <p class="text-neutral-400 text-lg">Dalam kondisi apapun</p>
             </div>
@@ -499,7 +498,7 @@
 
     <section id="cara-kerja" class="py-20 bg-neutral-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate>
                 <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Cara Kerja</h2>
                 <p class="text-lg text-neutral-600">Mulai perjalanan digital bisnis Anda dalam 4 langkah mudah</p>
             </div>
@@ -545,8 +544,10 @@
 
     <section id="harga" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center text-neutral-900 mb-4">Pilih paket yang cocok</h2>
-            <p class="text-lg text-neutral-600 text-center mb-16">Mulai dari gratis, upgrade kapan aja</p>
+            <div class="text-center mb-16" data-animate>
+                <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4">Pilih paket yang cocok</h2>
+                <p class="text-lg text-neutral-600">Mulai dari gratis, upgrade kapan aja</p>
+            </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-neutral-50 rounded-3xl p-8 border-2 border-neutral-200" data-animate>
@@ -641,7 +642,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
+                <div class="text-white" data-animate>
                     <h2 class="text-4xl md:text-5xl font-black mb-6">
                         Punya UMKM?<br>
                         <span class="text-neutral-900">Bergabunglah dengan Kami</span>
@@ -662,8 +663,8 @@
                     </div>
                 </div>
 
-                <div class="relative hidden lg:block">
-                    <div class="bg-white rounded-3xl p-6 shadow-2xl max-w-sm ml-auto transform rotate-3">
+                <div class="relative hidden lg:block" data-animate>
+                    <div class="bg-white rounded-3xl p-6 shadow-2xl max-w-sm ml-auto transform rotate-3 animate-float">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center">
                                 <i data-lucide="store" class="w-7 h-7 text-primary-600"></i>
