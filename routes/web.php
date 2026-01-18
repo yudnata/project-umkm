@@ -10,6 +10,22 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
+Route::post('/login', function () {
+    return redirect()->route('customer.dashboard');
+});
+
+Route::get('/customer/dashboard', function () {
+    return view('pages.customer.dashboard');
+})->name('customer.dashboard');
+
+Route::get('/customer/orders', function () {
+    return view('pages.customer.orders');
+})->name('customer.orders');
+
+Route::get('/customer/partners', function () {
+    return view('pages.customer.partners');
+})->name('customer.partners');
+
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
